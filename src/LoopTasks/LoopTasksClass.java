@@ -8,4 +8,12 @@ public class LoopTasksClass {
             y++;
         }
     }
+
+    public void Task_02(int x, int y){
+        System.out.println("Task 02 result: ");
+        for (int i = 0; i < x; i++) {
+            System.out.println(y);
+            y--;
+        }
+    }
 }
