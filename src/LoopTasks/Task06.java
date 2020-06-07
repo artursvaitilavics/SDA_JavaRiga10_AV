@@ -25,7 +25,7 @@ public class Task06 extends Helpers {
             System.out.println(fib1);
             int fibonacciTemp = fib2 + fib1;
             fib1 = fib2;
-            fib2 = fibonacciTemp;
+            fib2 = fibonacciTemp;//
         }
     }
 
