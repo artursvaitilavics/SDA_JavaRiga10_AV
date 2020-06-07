@@ -9,16 +9,16 @@ public class ExerciseApp {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please eneter X: ");
         int x = scanner.nextInt();
-        System.out.println("Please eneter Y: ");
-        int y = scanner.nextInt();
-        System.out.println("Please eneter Z: ");
-        int z = scanner.nextInt();
+//        System.out.println("Please eneter Y: ");
+//        int y = scanner.nextInt();
+//        System.out.println("Please eneter Z: ");
+//        int z = scanner.nextInt();
 ////////////////////////////////////////////////////////////////////////////////////////////////
         //TASKS//
 
-        Task05 task05 = new Task05();
-        task05.ForLoop(x,y,z);
-        task05.WhileLoop(x,y,z);
-        task05.DoWhileLoop(x,y,z);
+        Task06 task06 = new Task06();
+        task06.ForLoop(x);
+        task06.WhileLoop(x);
+        task06.DoWhileLoop(x);
     }
 }

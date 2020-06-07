@@ -17,21 +17,22 @@ public class Task05 {
 
     public void WhileLoop(int x, int y, int z) {
         System.out.println("While Loop: ");
+        int limit = z+x*y;
         int counter = 0;
-        while (counter < x) {
+        while (z < limit) {
             System.out.println(z);
             z += y;
-            counter++;
+//            counter++;
         }
+
     }
 
     public void DoWhileLoop(int x, int y, int z) {
         System.out.println("DoWhile Loop: ");
-        int counter = 0;
+        int limit = z+x*y;
         do {
             System.out.println(z);
             z += y;
-            counter++;
-        } while (counter < x);
+        } while (z < limit);
     }
 }
