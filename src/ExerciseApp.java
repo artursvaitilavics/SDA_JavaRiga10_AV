@@ -18,5 +18,7 @@ public class ExerciseApp {
 
         Task05 task05 = new Task05();
         task05.ForLoop(x,y,z);
+        task05.WhileLoop(x,y,z);
+        task05.DoWhileLoop(x,y,z);
     }
 }

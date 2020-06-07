@@ -9,18 +9,29 @@ public class Task05 {
     //x/y reizes printeet z/y
     public void ForLoop(int x, int y, int z) {
         System.out.println("For Loop: ");
-        x = x / y;
         for (int i = 0; i < x; i++) {
-            z = z / y;
             System.out.println(z);
+            z += y;
         }
     }
 
-    public void WhileLoop() {
+    public void WhileLoop(int x, int y, int z) {
         System.out.println("While Loop: ");
+        int counter = 0;
+        while (counter < x) {
+            System.out.println(z);
+            z += y;
+            counter++;
+        }
     }
 
-    public void DoWhileLoop() {
+    public void DoWhileLoop(int x, int y, int z) {
         System.out.println("DoWhile Loop: ");
+        int counter = 0;
+        do {
+            System.out.println(z);
+            z += y;
+            counter++;
+        } while (counter < x);
     }
 }
