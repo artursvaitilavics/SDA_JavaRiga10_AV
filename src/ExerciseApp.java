@@ -17,15 +17,6 @@ public class ExerciseApp {
 //        int z = scanner.nextInt();
 ////////////////////////////////////////////////////////////////////////////////////////////////
         //TASKS//
-//        Taks01 task01 = new Taks01();
-//        task01.Task01ForLoop(x, y);
-//        task01.Task01WhileLoop(x, y);
-//        task01.Task01DoWhileLoop(x, y);
-
-//        Task02 task02 = new Task02();
-//        task02.ForLoop(x, y);
-//        task02.WhileLoop(x, y);
-//        task02.DoWhileLoop(x, y);
 
         Task03 task03 = new Task03();
         task03.ForLoop(x, y);
