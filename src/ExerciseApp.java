@@ -1,4 +1,4 @@
-import LoopTasks.LoopTasksClass;
+import LoopTasks.Taks01;
 
 import java.util.Scanner;
 
@@ -15,7 +15,9 @@ public class ExerciseApp {
 //        int z = scanner.nextInt();
 ////////////////////////////////////////////////////////////////////////////////////////////////
         //TASKS//
-        LoopTasksClass task01 = new LoopTasksClass();
-        task01.Task_02(x, y);
+        Taks01 task01 = new Taks01();
+        task01.Task01ForLoop(x, y);
+        task01.Task01WhileLoop(x, y);
+        task01.Task01DoWhileLoop(x, y);
     }
 }
