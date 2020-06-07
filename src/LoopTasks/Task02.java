@@ -24,6 +24,6 @@ public class Task02 {
         do {
             System.out.println(y);
             y--;
-        } while (y > limit);
+        } while (y >= limit);
     }
 }

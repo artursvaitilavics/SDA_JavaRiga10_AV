@@ -1,5 +1,6 @@
 import LoopTasks.Taks01;
 import LoopTasks.Task02;
+import LoopTasks.Task03;
 
 import java.util.Scanner;
 
@@ -21,9 +22,14 @@ public class ExerciseApp {
 //        task01.Task01WhileLoop(x, y);
 //        task01.Task01DoWhileLoop(x, y);
 
-        Task02 task02 = new Task02();
-        task02.ForLoop(x, y);
-        task02.WhileLoop(x, y);
-        task02.DoWhileLoop(x, y);
+//        Task02 task02 = new Task02();
+//        task02.ForLoop(x, y);
+//        task02.WhileLoop(x, y);
+//        task02.DoWhileLoop(x, y);
+
+        Task03 task03 = new Task03();
+        task03.ForLoop(x, y);
+        task03.WhileLoop(x, y);
+        task03.DoWhileLoop(x, y);
     }
 }
