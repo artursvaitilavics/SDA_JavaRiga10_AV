@@ -2,39 +2,39 @@ package LoopTasks;
 
 public class Helpers {
 
-    public void ForLoop(int x) {
+    public void forLoop(int x) {
         System.out.println("For Loop: ");
     }
 
-    public void WhileLoop(int x) {
+    public void whileLoop(int x) {
         System.out.println("While Loop: ");
     }
 
-    public void DoWhileLoop(int x) {
+    public void doWhileLoop(int x) {
         System.out.println("DoWhile Loop: ");
     }
 
-    public void ForLoop(int x, int y) {
+    public void forLoop(int x, int y) {
         System.out.println("For Loop: ");
     }
 
-    public void WhileLoop(int x, int y) {
+    public void whileLoop(int x, int y) {
         System.out.println("While Loop: ");
     }
 
-    public void DoWhileLoop(int x, int y) {
+    public void doWhileLoop(int x, int y) {
         System.out.println("DoWhile Loop: ");
     }
 
-    public void ForLoop(int x, int y, int z) {
+    public void forLoop(int x, int y, int z) {
         System.out.println("For Loop: ");
     }
 
-    public void WhileLoop(int x, int y, int z) {
+    public void whileLoop(int x, int y, int z) {
         System.out.println("While Loop: ");
     }
 
-    public void DoWhileLoop(int x, int y, int z) {
+    public void doWhileLoop(int x, int y, int z) {
         System.out.println("DoWhile Loop: ");
     }
 }

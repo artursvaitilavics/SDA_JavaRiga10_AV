@@ -3,39 +3,46 @@ package LoopTasks;
 public class Task06 extends Helpers {
     //Print Fibonacci Sequence for numbers less than x
 
-    public int[] fibonacciArray(int arrayLength) {
-        int[] fibio = new int[arrayLength];
-        int fib1 = 0;
+    @Override
+    public void forLoop(int x) {
+        super.forLoop(x);
+        int fib1;
         int fib2 = 1;
-        for (int i = 0; i < fibio.length; i++) {
-            fibio[i] = fib1;
-            int fibichio = fib2 + fib1;
+        for (int i = 0; i <= x; i = fib1 + fib2) {
+            System.out.print(" " + i);
             fib1 = fib2;
-            fib2 = fibichio;
+            fib2 = i;
         }
-        return fibio;
+        System.out.println();
     }
 
     @Override
-    public void ForLoop(int x) {
-        super.ForLoop(x);
-        int fib1 = 0;
+    public void whileLoop(int x) {
+        super.whileLoop(x);
+        int fib1;
         int fib2 = 1;
-        for (int i = 0; i <= x; i=fib2) {
-            System.out.println(fib1);
-            int fibonacciTemp = fib2 + fib1;
+        int fibio = 0;
+        while (fibio <= x) {
+            System.out.print(" " + fibio);
             fib1 = fib2;
-            fib2 = fibonacciTemp;//
+            fib2 = fibio;
+            fibio = fib1 + fib2;
         }
+        System.out.println();
     }
 
     @Override
-    public void WhileLoop(int x) {
-        super.WhileLoop(x);
-    }
-
-    @Override
-    public void DoWhileLoop(int x) {
-        super.DoWhileLoop(x);
+    public void doWhileLoop(int x) {
+        super.doWhileLoop(x);
+        int fib1;
+        int fib2 = 1;
+        int fibio = 0;
+        do {
+            System.out.print(" " + fibio);
+            fib1 = fib2;
+            fib2 = fibio;
+            fibio = fib1 + fib2;
+        } while (fibio <= x);
+        System.out.println();
     }
 }

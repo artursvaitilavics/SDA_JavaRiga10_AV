@@ -17,8 +17,8 @@ public class ExerciseApp {
         //TASKS//
 
         Task06 task06 = new Task06();
-        task06.ForLoop(x);
-        task06.WhileLoop(x);
-        task06.DoWhileLoop(x);
+        task06.forLoop(x);
+        task06.whileLoop(x);
+        task06.doWhileLoop(x);
     }
 }
