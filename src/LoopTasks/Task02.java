@@ -11,19 +11,19 @@ public class Task02 {
 
     public void WhileLoop(int x, int y) {
         System.out.println("While loop result: ");
-        while (x > 0) {
+        int limit = y - x;
+        while (y > limit) {
             System.out.println(y);
-            x--;
             y--;
         }
     }
 
     public void DoWhileLoop(int x, int y) {
         System.out.println("Do-while loop result: ");
+        int limit = y - x;
         do {
             System.out.println(y);
             y--;
-            x--;
-        } while (x > 0);
+        } while (y > limit);
     }
 }
