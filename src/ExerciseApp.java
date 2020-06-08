@@ -16,9 +16,9 @@ public class ExerciseApp {
 ////////////////////////////////////////////////////////////////////////////////////////////////
         //TASKS//
 
-        Task06 task06 = new Task06();
-        task06.forLoop(x);
-        task06.whileLoop(x);
-        task06.doWhileLoop(x);
+        Task07 task = new Task07();
+        task.forLoop(x);
+        task.whileLoop(x);
+        task.doWhileLoop(x);
     }
 }
