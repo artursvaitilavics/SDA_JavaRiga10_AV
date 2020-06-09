@@ -7,32 +7,55 @@ public class Task08 extends Helpers {
     @Override
     public void forLoop(int x, int y) {
         super.forLoop(x, y);
-        int yPoerOfX = y;
-        for (int i = 0; i < x - 1; i++) {
-            yPoerOfX = yPoerOfX * y;
+        int tempValue = x;
+        for (int j = x; j <= y; j++) {
+            tempValue = j;
+            for (int i = x; i <= y; i++) {
+                System.out.print(" " + tempValue);
+                tempValue = tempValue * j;
+            }
+            System.out.println();
         }
-        System.out.print(yPoerOfX);
     }
 
     @Override
     public void whileLoop(int x, int y) {
         super.whileLoop(x, y);
-        int yPoerOfX = y;
-        while (x > 1) {
-            x--;
-            yPoerOfX = yPoerOfX * y;
+        int counter1 = x;
+        int counter3 = x;
+        int yPoerOfX = x;
+
+        while (counter3 <= y) {
+            yPoerOfX = counter3;
+            counter1 = y;
+            while (counter1 > 1) {
+                System.out.print(" " + yPoerOfX);
+                yPoerOfX = yPoerOfX * counter3;
+                counter1--;
+            }
+            counter3++;
+            System.out.println();
         }
-        System.out.println(yPoerOfX);
+
     }
 
     @Override
     public void doWhileLoop(int x, int y) {
         super.doWhileLoop(x, y);
-        int yPoerOfX = y;
+        int yPoerOfX = x;
+        int counter1 = x;
+        int counter2 = x;
+
         do {
-            x--;
-            yPoerOfX = yPoerOfX * y;
-        } while (x > 1);
-        System.out.println(yPoerOfX);
+            counter1 = x;
+            yPoerOfX = counter2;
+            do {
+                System.out.print(" " + yPoerOfX);
+                yPoerOfX = yPoerOfX * counter2;
+                counter1++;
+            } while (counter1 <= y);
+            System.out.println();
+            counter2++;
+        } while (counter2 <= y);
     }
 }
