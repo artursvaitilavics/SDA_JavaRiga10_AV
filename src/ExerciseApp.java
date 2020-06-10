@@ -16,7 +16,7 @@ public class ExerciseApp {
 ////////////////////////////////////////////////////////////////////////////////////////////////
         //TASKS//
 
-        Task08 task = new Task08();
+        Task09 task = new Task09();
         task.forLoop(x, y);
         task.whileLoop(x, y);
         task.doWhileLoop(x, y);
