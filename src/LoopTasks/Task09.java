@@ -15,11 +15,23 @@ public class Task09 extends Helpers {
         int[] armstrongEq = new int[xString.length()];
         int armstrongNumber = 0;
         //TODO : Print only Amrstrong numbers
-        for (int i = 0; i < xString.length(); i++) {
-            String tempString = "" + xString.charAt(i);
-            armstrongEq[i] = Integer.parseInt(tempString);
-            armstrongNumber = armstrongNumber + armstrongEq[i] * armstrongEq[i] * armstrongEq[i];
+        for (int i = x; i <=y ; i++) {
+            armstrongNumber = 0;
+            for (int l = 0; l < xString.length(); l++) {
+                String tempString = "" + xString.charAt(l);
+                armstrongEq[l] = Integer.parseInt(tempString);
+                armstrongNumber = armstrongNumber + armstrongEq[l] * armstrongEq[l] * armstrongEq[l];
+                System.out.print(" - " + l);
+            }
+            if (armstrongNumber == i ){
+                System.out.println(armstrongNumber);
+            }
         }
+//        for (int i = 0; i < xString.length(); i++) {
+//            String tempString = "" + xString.charAt(i);
+//            armstrongEq[i] = Integer.parseInt(tempString);
+//            armstrongNumber = armstrongNumber + armstrongEq[i] * armstrongEq[i] * armstrongEq[i];
+//        }
         System.out.println(armstrongNumber);
     }
         //TODO: Get the armstrong thing work in other loops
