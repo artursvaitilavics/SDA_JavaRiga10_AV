@@ -20,7 +20,7 @@ public class ExerciseApp {
 ////////////////////////////////////////////////////////////////////////////////////////////////
         //TASKS//
 
-        Task11 task = new Task11();
+        Task12 task = new Task12();
         task.forLoop(maxDenominator);
         task.whileLoop(maxDenominator);
         task.doWhileLoop(maxDenominator);
