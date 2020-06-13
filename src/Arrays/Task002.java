@@ -13,4 +13,26 @@ public class Task002 {
     //        // This is an error
     //   }
     //   ```
+
+    public int[] myArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    public int[] arrayCopy = new int[myArray.length];
+
+    public void copyArray(){
+        arrayCopy = myArray.clone();
+    }
+
+    public void printArrays(int[] array){
+        System.out.println("Array: " + array);
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(" " + array[i]);
+        }
+        System.out.println();
+    }
+
+    public void changeElement(int element, int value){
+        if (element > arrayCopy.length-1){
+            return;
+        }
+        this.arrayCopy[element] = value;
+    }
 }

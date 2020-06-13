@@ -1,20 +1,15 @@
-import Arrays.Task001;
-import LoopTasks.*;
-
-import java.util.Scanner;
+import Arrays.*;
 
 public class ExerciseApp {
 
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter letter: ");
-        String userInput = scanner.nextLine();
-////////////////////////////////////////////////////////////////////////////////////////////////
-
         //TASKS Group 2 - Arrays//
-        Task001 task001 = new Task001();
-        task001.getIndex(userInput);
+        Task002 task = new Task002();
+        task.copyArray();
+        task.printArrays(task.myArray);
+        task.printArrays(task.arrayCopy);
+        task.changeElement(8,55);
+        task.printArrays(task.arrayCopy);
 
     }
 }

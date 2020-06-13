@@ -17,5 +17,4 @@ public class Task001 {
                 "\". Result "
                 + index);
     }
-
 }
