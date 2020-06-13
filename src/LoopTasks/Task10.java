@@ -28,13 +28,18 @@ public class Task10 extends Helpers {
         int fib1;
         int fib2 = 1;
         int fibio = 0;
+        float average = 0;
+        int averageDivider = 0;
         while (fibio <= x) {
             System.out.print(" " + fibio);
+            average = average + fibio;
             fib1 = fib2;
             fib2 = fibio;
             fibio = fib1 + fib2;
+            averageDivider++;
         }
         System.out.println();
+        System.out.println(average/averageDivider);
     }
 
     @Override
@@ -43,12 +48,17 @@ public class Task10 extends Helpers {
         int fib1;
         int fib2 = 1;
         int fibio = 0;
+        float average = 0;
+        int averageDivider = 0;
         do {
             System.out.print(" " + fibio);
+            average = average + fibio;
             fib1 = fib2;
             fib2 = fibio;
             fibio = fib1 + fib2;
+            averageDivider++;
         } while (fibio <= x);
         System.out.println();
+        System.out.println(average/averageDivider);
     }
 }
