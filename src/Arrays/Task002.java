@@ -14,25 +14,28 @@ public class Task002 {
     //   }
     //   ```
 
-    public int[] myArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    public int[] arrayCopy = new int[myArray.length];
+    public int[] array01 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    public int[] array02 = new int[array01.length];
 
-    public void copyArray(){
-        arrayCopy = myArray.clone();
+    public void copyArray(int[] arrayFrom, int[] arrayTo) {
+        System.out.println("Copy an array:");
+        for (int i = 0; i < arrayFrom.length; i++) {
+            arrayTo[i] = arrayFrom[i];
+        }
     }
 
-    public void printArrays(int[] array){
-        System.out.println("Array: " + array);
+    public void printArrays(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(" " + array[i]);
         }
         System.out.println();
     }
 
-    public void changeElement(int element, int value){
-        if (element > arrayCopy.length-1){
+    public void changeAt(int element, int value) {
+        System.out.println("Change last element at: ");
+        if (element > array02.length - 1) {
             return;
         }
-        this.arrayCopy[element] = value;
+        this.array02[element] = value;
     }
 }
