@@ -1,6 +1,7 @@
 package Arrays;
 
 public class Task003 extends Task002 {
+    //Task03-Task06
     //3. Write following methods:
     //    1. Add an element to array at the end.
     //    2. Add an element to array at specific index.
