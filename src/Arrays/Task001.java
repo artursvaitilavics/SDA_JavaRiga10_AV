@@ -9,6 +9,7 @@ public class Task001 {
         for (int i = 0; i < myArray.length; i++) {
             if (element.equals(myArray[i])) {
                 index = i;
+                break;
             }
         }
         System.out.println("Find index of \""
