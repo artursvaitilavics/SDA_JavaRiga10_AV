@@ -22,10 +22,10 @@ public class Task11 extends Helpers {
     public void forLoop(int x) {
         super.forLoop(x);
         float pi = 4;
-        float nextIndex = 5;
-        for (float i = 3; i < x; i += 2) {
-            pi = pi - (4 / i) + (4 / nextIndex);
-            nextIndex = nextIndex + 2;
+        int sign = 1;
+        for (float i = 3; i <= x; i += 2) {
+            pi = pi - (sign * (4 / i));
+            sign = -1 * sign;
         }
         System.out.println(pi);
     }
@@ -33,10 +33,30 @@ public class Task11 extends Helpers {
     @Override
     public void whileLoop(int x) {
         super.whileLoop(x);
+        float pi = 4;
+        int sign = 1;
+        int counter = 3;
+
+        while (counter <= x) {
+            pi = pi - (sign * (4.0f / counter));
+            sign = -1 * sign;
+            counter += 2;
+        }
+        System.out.println(pi);
     }
 
     @Override
     public void doWhileLoop(int x) {
         super.doWhileLoop(x);
+        float pi = 4;
+        int sign = 1;
+        int counter = 3;
+
+        do {
+            pi = pi - (sign * (4.0f / counter));
+            sign = -1 * sign;
+            counter += 2;
+        } while (counter <= x);
+        System.out.println(pi);
     }
 }
