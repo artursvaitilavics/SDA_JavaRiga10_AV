@@ -18,14 +18,8 @@ public class Task10 extends Helpers {
             countLoopps++;
         }
         System.out.println();
-        System.out.println(average/countLoopps);
-//        int average = 0;
-//        for (int i = 0; i < averageArray.length; i++) {
-//            average = average + averageArray[i];
-//            System.out.print(" " + averageArray[i]);
-//        }
-//        System.out.println();
-//        System.out.println("Average from printed Fib = " + average/averageArray.length);
+        System.out.println(average / countLoopps);
+
     }
 
     @Override
