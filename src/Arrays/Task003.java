@@ -33,35 +33,32 @@ public class Task003 extends Task002 {
     public int[] addAt(int[] inputArray, int index, int value) {
         System.out.println("Add element at specific index.");
         int[] array = new int[inputArray.length + 1];
-        for (int i = 0; i < array.length; i++) {
-            if (i == index) {
-                array[i] = value;
-                for (int j = i + 1; j < array.length; j++) {
-                    array[j] = inputArray[j - 1];
-                }
-                break;
+        int arrayIndex = 0;
+        for (int i = 0; i < array.length - 1; i++) {
+            if (arrayIndex == index) {
+                array[arrayIndex] = value;
+                arrayIndex++;
+                array[arrayIndex] = inputArray[i];
+            } else {
+                array[arrayIndex] = inputArray[i];
             }
-            array[i] = inputArray[i];
+            arrayIndex++;
         }
-
         return array;
     }
 
     public int[] removeAt(int[] inputArray, int index) {
         System.out.println("Remove element from specific index");
-        int[] array = new int[inputArray.length - 1];
-        int indexUp = 0;
-
-        for (int i = 0; i < array.length; i++) {
+        int[] array = new int[inputArray.length-1];
+        int arrayIndex = 0;
+        for (int i = 0; i < inputArray.length; i++) {
             if (i == index) {
-                array[i] = inputArray[i + 1];
-                for (int j = i+1; j < array.length; j++) {
-                    array[j] = inputArray[j+1];
-                }
-                break;
+                i++;
+                array[arrayIndex] = inputArray[i];
             } else {
-                array[i] = inputArray[i];
+                array[arrayIndex] = inputArray[i];
             }
+            arrayIndex++;
         }
         return array;
     }

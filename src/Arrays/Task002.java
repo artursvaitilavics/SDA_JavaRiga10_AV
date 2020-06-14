@@ -1,5 +1,7 @@
 package Arrays;
 
+import java.util.Arrays;
+
 public class Task002 {
     //2. Write a method that will create a copy of array.
     //   ```
@@ -25,9 +27,11 @@ public class Task002 {
     }
 
     public void printArrays(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(" " + array[i]);
-        }
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.print(" " + array[i]);
+//        }
+        System.out.println(Arrays.toString(array));
+
         System.out.println();
     }
 

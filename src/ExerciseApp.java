@@ -15,7 +15,7 @@ public class ExerciseApp {
         task.printArrays(task.array01);
         System.out.println("Copy of an original:");
         task.printArrays(task.array02);
-        task.changeAt(8,55);
+        task.changeAt(7,55);
         task.printArrays(task.array02);
 
         //Task 03:
@@ -26,7 +26,7 @@ public class ExerciseApp {
         int[] array05 = task003.addAt(array04,2,11);
         task.printArrays(array05);
 
-        int[] array06 = task003.removeAt(array05, 3);
+        int[] array06 = task003.removeAt(array05, 4);
         task.printArrays(array06);
     }
 }
