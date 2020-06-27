@@ -1,7 +1,5 @@
 package ProgrammingGame;
 
-import GuessingGame.Game;
-
 public class PlayerMove {
     int xPos = 0;
     int yPos = 0;
@@ -19,20 +17,8 @@ public class PlayerMove {
 
     public void movePlayer(int pos1, int pos2) {
         replaceCell(emptyCell);
-        if (pos1 >= 0 && pos1 < GameField.gameField.length) {
-            if (GameField.gameField[pos1][pos2].equals(GameField.obstacle)) {
-                return;
-            } else {
-                xPos = pos1;
-            }
-        }
-        if (pos2 >= 0 && pos2 < GameField.gameField.length) {
-            if (GameField.gameField[pos1][pos2].equals(GameField.obstacle)) {
-                return;
-            }else {
-                yPos = pos2;
-            }
-        }
+        xPos = pos1;
+        yPos = pos2;
         replaceCell(player);
     }
 

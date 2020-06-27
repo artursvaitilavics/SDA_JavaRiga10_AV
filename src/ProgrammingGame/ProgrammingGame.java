@@ -1,6 +1,9 @@
 package ProgrammingGame;
 
+import GuessingGame.Game;
+
 import java.util.Scanner;
+import java.util.concurrent.ExecutionException;
 
 public class ProgrammingGame {
 
@@ -49,18 +52,47 @@ public class ProgrammingGame {
 
             switch (_moves) {
                 case "down":
-                    yPos++;
+                    if (yPos < GameField.gameField.length) {
+                        try {
+                            if (!GameField.gameField[yPos + 1][xPos].equals(GameField.obstacle)) {
+                                yPos++;
+                            }
+                        } catch (Exception e) {
+                        }
+                    }
                     break;
                 case "up":
-                    yPos--;
+                    if (yPos > 0) {
+                        try {
+                            if (!GameField.gameField[yPos - 1][xPos].equals(GameField.obstacle)) {
+                                yPos--;
+                            }
+                        } catch (Exception e) {
+                        }
+
+                    }
                     break;
                 case "right":
-                    if(!GameField.gameField[yPos][xPos+1].equals(GameField.obstacle)){
-                        xPos++;
+                    if (xPos < GameField.gameField.length) {
+                        try {
+                            if (!GameField.gameField[yPos][xPos + 1].equals(GameField.obstacle)) {
+                                xPos++;
+                            }
+                        } catch (Exception e) {
+                        }
+
                     }
                     break;
                 case "left":
-                    xPos--;
+                    if (xPos > 0) {
+                        try {
+                            if (!GameField.gameField[yPos][xPos - 1].equals(GameField.obstacle)) {
+                                xPos--;
+                            }
+                        } catch (Exception e) {
+                        }
+
+                    }
                     break;
             }
 
