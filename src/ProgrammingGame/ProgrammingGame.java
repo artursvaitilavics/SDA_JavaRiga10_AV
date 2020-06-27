@@ -1,6 +1,5 @@
 package ProgrammingGame;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class ProgrammingGame {
@@ -28,11 +27,10 @@ public class ProgrammingGame {
 
         Scanner scanner = new Scanner(System.in);
         Player player = new Player();
+
         int gameFieldSize = 2;
-//        String playerBug = "[*]";
-        String target = "[$]";
-        String obstacle = "[#]";
-        String emptyCell = "[ ]";
+        int yPos = 0;
+        int xPos = 0;
 
 
         do {
@@ -40,90 +38,38 @@ public class ProgrammingGame {
             gameFieldSize = scanner.nextInt();
         } while (gameFieldSize <= 2);
 
-        String[][] gameField = createGameField(gameFieldSize, emptyCell);
-        Movement playerMovement = new Movement();
 
-        //put a bug at the start of the game field
-        playerMovement.placePlayer(gameField);
+        GameField gameField = new GameField(gameFieldSize, gameFieldSize);
+        PlayerMove playerMove = new PlayerMove(0, 0);
 
-        //add target
-        addTarget(gameFieldSize, gameField, target);
 
-        //place obstacles
-        placeObstacles(gameFieldSize, player.getPlayer(), target, obstacle, gameField);
+        do {
+            System.out.println("\nPlease chose a move: ");
+            String _moves = scanner.nextLine();
 
-        String move = "";
-        //Game:
-        while (true) {
-
-            System.out.println("Please chose direction to move: ");
-            move = scanner.nextLine();
-            switch (move) {
-                case "up":
-                    playerMovement.moveUp(gameField, obstacle);
-                    break;
+            switch (_moves) {
                 case "down":
-                    gameField[player.yPos][player.xPos] = player.getPlayer();
+                    yPos++;
                     break;
-                case "left":
-                    playerMovement.moveLeft(gameField, obstacle);
+                case "up":
+                    yPos--;
                     break;
                 case "right":
-                    playerMovement.moveRight(gameField, obstacle);
+                    if(!GameField.gameField[yPos][xPos+1].equals(GameField.obstacle)){
+                        xPos++;
+                    }
+                    break;
+                case "left":
+                    xPos--;
                     break;
             }
-            //Initial Print
 
-            printField(gameField);
+            playerMove.movePlayer(yPos, xPos);
+            gameField.printGameField();
 
-        }
-
+        } while (true);
 
     }
 
-
-    private static void placeObstacles(int gameFieldSize, String playerBug, String target, String obstacle, String[][] gameField) {
-        Random random = new Random();
-        int chanceForObstacle = random.nextInt(gameFieldSize);
-
-        while (chanceForObstacle > 0) {
-            int randomRow = random.nextInt((gameFieldSize));
-            int randomColumn = random.nextInt((gameFieldSize));
-            if (!gameField[randomRow][randomColumn].equals(playerBug)
-                    && !gameField[randomRow][randomColumn].equals(target)) {
-                gameField[randomRow][randomColumn] = obstacle;
-            }
-            chanceForObstacle--;
-        }
-    }
-
-    private static void addTarget(int gameFieldSize, String[][] gameField, String _target) {
-
-        int min = (int) ((gameFieldSize - 1) * 0.75f);
-        int range = (gameFieldSize - 1) - min + 1;
-
-        int rand = (int) (Math.random() * range) + min;
-
-        gameField[rand][rand] = _target;
-    }
-
-    private static void printField(String[][] testField) {
-        for (int i = 0; i < testField.length; i++) {
-            for (int j = 0; j < testField.length; j++) {
-                System.out.print(testField[i][j]);
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
-
-    private static String[][] createGameField(int size, String _cell) {
-        String[][] gameField = new String[size][size];
-        for (int i = 0; i < gameField.length; i++) {
-            for (int j = 0; j < gameField.length; j++) {
-                gameField[i][j] = _cell;
-            }
-        }
-        return gameField;
-    }
 }
+
