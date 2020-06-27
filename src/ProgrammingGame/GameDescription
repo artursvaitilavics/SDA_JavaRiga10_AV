@@ -1,0 +1,40 @@
+Programming game
+The game is about asking user to program a movements for a bug on a field.
+We will have rectangular field with a bug `*` put into start position (0,0).
+Additionally we will put target (where bug have to come - `$`) and obstacles
+(places where bug cannot step on - `#`) put on a field.
+We will ask user to enter simple commands like `up`, `left`, `down`, `right`
+that will move a bug one step into designated direction.
+And the game will be done as soon as bug reaches target.
+
+There is a room for improvements as well - you can think about score, for example.
+
+Here are the steps for you to follow:
+1. Define a field - 2d array. Select appropriate type.
+2. Write method to print 2D array.
+3. Initialize array - fill whole array with empty symbols. for example you can use spaces. Test that printing works OK.
+
+4. Write method that will put a bug at the start position. Test that it works.
+5. Write method that will randomly put a target (preferably on the farthest part of a field). Test that it works.
+6. Write method that will randomly put some number of obstacles. Note obstacles should not be put on player or target.
+    Don't bother with unsolvable cases where there is not possible way to get a bug to a target for now. Test this method.
+7. Write method that moves a bug one tile into one of directions - up, down, left, right.
+     1. Before moving - you should ensure that it is possible to move - there is no obstacle and it is not out of field.
+     2. If is not possible to move - print error message and ignore movement - stay at same place
+     3. If bug is stepped onto a target - the method should return true, otherwise false.
+        This way we will know if a bug has reached a target.
+     4. Test that all this works.
+8. Now we need to implement method that will ask user to enter commands and return the commands in a useful way.
+     1. We can ask user to enter only one command or multiple commands separated by comma.
+     2. Each command is only one word `up`, `down`, `left` or `right`.
+     3. User is allowed to enter multiple commands separated by comma: `up,down,down,left`.
+     4. The method should return array of commands.
+ 9. All what is left - to implement main game loop.
+     1. At the start of game we need to create and fill a field. You can ask user to enter field size, number of obstacles if you want.
+     2. Print a field, so user can program his bug.
+     2. Next - ask user to enter commands.
+     3. Then execute entered commands unless all commands executed or bug has reached a target.
+     4. Print new state of the field.
+     4. Repeat 2, if not reached target.
+     5. Display game result.
+ 10. Think how you can additionally improve a game.
