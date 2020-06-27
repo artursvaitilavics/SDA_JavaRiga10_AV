@@ -1,6 +1,5 @@
 package ProgrammingGame;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -28,8 +27,9 @@ public class ProgrammingGame {
 
 
         Scanner scanner = new Scanner(System.in);
+        Player player = new Player();
         int gameFieldSize = 2;
-        String playerBug = "[*]";
+//        String playerBug = "[*]";
         String target = "[$]";
         String obstacle = "[#]";
         String emptyCell = "[ ]";
@@ -50,7 +50,7 @@ public class ProgrammingGame {
         addTarget(gameFieldSize, gameField, target);
 
         //place obstacles
-        placeObstacles(gameFieldSize, playerBug, target, obstacle, gameField);
+        placeObstacles(gameFieldSize, player.getPlayer(), target, obstacle, gameField);
 
         String move = "";
         //Game:
@@ -63,7 +63,8 @@ public class ProgrammingGame {
                     playerMovement.moveUp(gameField, obstacle);
                     break;
                 case "down":
-                    playerMovement.moveDown(gameField, obstacle);
+                    gameField[player.yPos][player.xPos] = player.getPlayer();
+                    break;
                 case "left":
                     playerMovement.moveLeft(gameField, obstacle);
                     break;
