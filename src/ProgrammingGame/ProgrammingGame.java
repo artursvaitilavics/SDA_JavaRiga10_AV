@@ -41,57 +41,17 @@ public class ProgrammingGame {
         GameField gameField = new GameField(gameFieldSize, gameFieldSize);
         PlayerMove playerMove = new PlayerMove(0, 0);
         EndLevel endLevel = new EndLevel();
+        PlayerMoveConditions playerMoveConditions = new PlayerMoveConditions();
 
 
         do {
             System.out.println("\nPlease chose a move: ");
-            String _moves = scanner.nextLine();
+            String move = scanner.nextLine();
 
-            switch (_moves) {
-                case "down":
-                    if (yPos < GameField.gameField.length) {
-                        try {
-                            if (!GameField.gameField[yPos + 1][xPos].equals(GameField.obstacle)) {
-                                yPos++;
-                            }
-                        } catch (Exception e) {
-                        }
-                    }
-                    break;
-                case "up":
-                    if (yPos > 0) {
-                        try {
-                            if (!GameField.gameField[yPos - 1][xPos].equals(GameField.obstacle)) {
-                                yPos--;
-                            }
-                        } catch (Exception e) {
-                        }
+            playerMoveConditions.playerMoveConditions(move);
 
-                    }
-                    break;
-                case "right":
-                    if (xPos < GameField.gameField.length) {
-                        try {
-                            if (!GameField.gameField[yPos][xPos + 1].equals(GameField.obstacle)) {
-                                xPos++;
-                            }
-                        } catch (Exception e) {
-                        }
-
-                    }
-                    break;
-                case "left":
-                    if (xPos > 0) {
-                        try {
-                            if (!GameField.gameField[yPos][xPos - 1].equals(GameField.obstacle)) {
-                                xPos--;
-                            }
-                        } catch (Exception e) {
-                        }
-
-                    }
-                    break;
-            }
+            yPos = playerMoveConditions.yPos;
+            xPos = playerMoveConditions.xPos;
 
             playerMove.movePlayer(yPos, xPos);
 
