@@ -5,6 +5,9 @@ import java.util.Random;
 public class GameField {
     static String[][] gameField;
     static String obstacle = "[#]";
+    static int targetPos1 = 0;
+    static int targetPos2 = 0;
+
     String emptyCell = "[ ]";
     String target = "[$]";
     Random random = new Random();
@@ -45,10 +48,10 @@ public class GameField {
         int min = (int) ((gameField.length - 1) * 0.7f);
         int max = gameField.length - 1;
 
-        int randomCoordinate01 = random.nextInt((max - min) + 1) + min;
-        int randomCoordinate02 = random.nextInt((max - min) + 1) + min;
+        targetPos1 = random.nextInt((max - min) + 1) + min;
+        targetPos2 = random.nextInt((max - min) + 1) + min;
 
-        gameField[randomCoordinate01][randomCoordinate02] = target;
+        gameField[targetPos1][targetPos2] = target;
 
         return gameField;
 

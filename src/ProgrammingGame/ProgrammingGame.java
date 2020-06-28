@@ -17,15 +17,11 @@ public class ProgrammingGame {
     ;
 
     public static void main(String[] args) {
-        //1. Define a field - 2d array. Select appropriate type.
-        //2. Write method to print 2D array.
-        //3. Initialize array - fill whole array with empty symbols.
-        // for example you can use spaces. Test that printing works OK.
-        //4. Write method that will put a bug at the start position. Test that it works.
-        //5. Write method that will randomly put a target
-        // (preferably on the farthest part of a field). Test that it works.
-        //6. Write method that will randomly put some number of obstacles. Note obstacles should not be put on player or target.
-        //    Don't bother with unsolvable cases where there is not possible way to get a bug to a target for now. Test this method.
+        //8. Now we need to implement method that will ask user to enter commands and return the commands in a useful way.
+        //     1. We can ask user to enter only one command or multiple commands separated by comma.
+        //     2. Each command is only one word `up`, `down`, `left` or `right`.
+        //     3. User is allowed to enter multiple commands separated by comma: `up,down,down,left`.
+        //     4. The method should return array of commands.
 
 
         Scanner scanner = new Scanner(System.in);
@@ -44,6 +40,7 @@ public class ProgrammingGame {
 
         GameField gameField = new GameField(gameFieldSize, gameFieldSize);
         PlayerMove playerMove = new PlayerMove(0, 0);
+        EndLevel endLevel = new EndLevel();
 
 
         do {
@@ -97,7 +94,14 @@ public class ProgrammingGame {
             }
 
             playerMove.movePlayer(yPos, xPos);
-            gameField.printGameField();
+
+            if (endLevel.targetReached(yPos, xPos)) {
+                System.out.println("\n\nLevel Complete!");
+                gameField.printGameField();
+                break;
+            } else {
+                gameField.printGameField();
+            }
 
         } while (true);
 

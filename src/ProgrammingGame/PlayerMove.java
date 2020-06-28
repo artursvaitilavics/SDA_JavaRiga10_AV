@@ -1,10 +1,8 @@
 package ProgrammingGame;
 
 public class PlayerMove {
-    int xPos = 0;
-    int yPos = 0;
-    int previousXPos = 0;
-    int previousYPos = 0;
+    static int xPos = 0;
+    static int yPos = 0;
     String player = "[*]";
     String emptyCell = "[ ]";
 
