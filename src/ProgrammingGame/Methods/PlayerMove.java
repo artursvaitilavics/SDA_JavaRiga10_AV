@@ -1,4 +1,4 @@
-package ProgrammingGame;
+package ProgrammingGame.Methods;
 
 public class PlayerMove {
     static int xPos = 0;

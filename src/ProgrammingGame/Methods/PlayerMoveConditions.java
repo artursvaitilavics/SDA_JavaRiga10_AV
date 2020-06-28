@@ -1,4 +1,4 @@
-package ProgrammingGame;
+package ProgrammingGame.Methods;
 
 public class PlayerMoveConditions {
     public static int yPos = 0;

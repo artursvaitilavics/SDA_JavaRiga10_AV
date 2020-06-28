@@ -1,4 +1,6 @@
-package ProgrammingGame;
+package ProgrammingGame.Methods;
+
+import ProgrammingGame.ProgrammingGame;
 
 import java.util.Random;
 

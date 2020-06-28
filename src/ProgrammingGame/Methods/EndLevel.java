@@ -1,4 +1,4 @@
-package ProgrammingGame;
+package ProgrammingGame.Methods;
 
 public class EndLevel {
     int targetPos1;
