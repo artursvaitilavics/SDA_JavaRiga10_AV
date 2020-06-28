@@ -10,10 +10,6 @@ public class EndLevel {
     }
 
     public boolean targetReached(int pos1, int pos2) {
-        if (pos1 == targetPos1 && pos2 == targetPos2) {
-            return true;
-        } else {
-            return false;
-        }
+        return pos1 == targetPos1 && pos2 == targetPos2;
     }
 }

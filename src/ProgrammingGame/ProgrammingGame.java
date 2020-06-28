@@ -1,18 +1,10 @@
 package ProgrammingGame;
 
-import GuessingGame.Game;
-
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 public class ProgrammingGame {
 
-    public enum moves {
-        DOWN,
-        UP,
-        RIGHT,
-        LEFT
-    }
+
 
     ;
 
@@ -25,11 +17,10 @@ public class ProgrammingGame {
 
 
         Scanner scanner = new Scanner(System.in);
-        Player player = new Player();
 
-        int gameFieldSize = 2;
-        int yPos = 0;
-        int xPos = 0;
+        int gameFieldSize;
+        int yPos;
+        int xPos;
 
 
         do {
@@ -50,8 +41,8 @@ public class ProgrammingGame {
 
             playerMoveConditions.playerMoveConditions(move);
 
-            yPos = playerMoveConditions.yPos;
-            xPos = playerMoveConditions.xPos;
+            yPos = PlayerMoveConditions.yPos;
+            xPos = PlayerMoveConditions.xPos;
 
             playerMove.movePlayer(yPos, xPos);
 

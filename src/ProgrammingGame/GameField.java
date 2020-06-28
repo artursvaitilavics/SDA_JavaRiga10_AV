@@ -21,17 +21,16 @@ public class GameField {
     }
 
 
-    private String[][] setEmptyGameField() {
+    private void setEmptyGameField() {
         for (int i = 0; i < gameField.length; i++) {
             for (int j = 0; j < gameField.length; j++) {
                 gameField[i][j] = emptyCell;
             }
         }
-        return gameField;
     }
 
-    private String[][] setObstacles() {
-        int divider = 0;
+    private void setObstacles() {
+        int divider;
         for (int i = 0; i < gameField.length; i += 2) {
             for (int j = 0; j < gameField.length; j++) {
                 divider = random.nextInt(gameField.length) + 1;
@@ -41,10 +40,9 @@ public class GameField {
                 }
             }
         }
-        return gameField;
     }
 
-    private String[][] setTarget() {
+    private void setTarget() {
         int min = (int) ((gameField.length - 1) * 0.7f);
         int max = gameField.length - 1;
 
@@ -53,15 +51,13 @@ public class GameField {
 
         gameField[targetPos1][targetPos2] = target;
 
-        return gameField;
-
     }
 
     public void printGameField() {
-        for (int i = 0; i < gameField.length; i++) {
+        for (String[] strings : gameField) {
             System.out.println();
             for (int j = 0; j < gameField.length; j++) {
-                System.out.print(gameField[i][j]);
+                System.out.print(strings[j]);
             }
         }
     }
