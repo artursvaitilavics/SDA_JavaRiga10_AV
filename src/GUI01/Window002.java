@@ -9,13 +9,13 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JOptionPane;
 
-public class Window002 extends JFrame{
+public class Window002 extends JFrame {
     private JTextField textField01;
     private JTextField textField02;
     private JTextField textField03;
     private JPasswordField passwordField;
 
-    public Window002(){
+    public Window002() {
         super("Window002");
         setLayout(new FlowLayout());
 
@@ -29,5 +29,34 @@ public class Window002 extends JFrame{
         passwordField = new JPasswordField("Password");
         add(passwordField);
 
+        TheHandler theHandler = new TheHandler();
+
+        textField01.addActionListener(theHandler);
+        textField02.addActionListener(theHandler);
+        textField03.addActionListener(theHandler);
+        passwordField.addActionListener(theHandler);
+
+    }
+
+    private class TheHandler implements ActionListener {
+        public void actionPerformed(ActionEvent event) {
+            String string1 = "";
+
+            if (event.getSource() == textField01) {
+                string1 = String.format("field 1: %s",
+                        event.getActionCommand());
+            } else if (event.getSource() == textField02) {
+                string1 = String.format("field 2: %s",
+                        event.getActionCommand());
+            } else if (event.getSource() == textField03) {
+                string1 = String.format("field 3: %s",
+                        event.getActionCommand());
+            } else if (event.getSource() == passwordField) {
+                string1 = String.format("password field is: %s",
+                        event.getActionCommand());
+            }
+
+            JOptionPane.showMessageDialog(null, string1);
+        }
     }
 }
