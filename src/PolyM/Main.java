@@ -3,13 +3,12 @@ package PolyM;
 public class Main {
     public static void main(String[] args) {
 
-        Car[] car01 = new Car[2];
+    Kamaz kamaz = new Kamaz();
+    Car car1 = new Car();
+    Car car2 = new Zaz();
 
-        car01[0] = new Zaz();
-        car01[1] = new Vaz();
+    kamaz.transport(car1);
+    kamaz.transport(car2);
 
-        for (int i = 0; i < 2; i++) {
-            car01[i].doors();
-        }
     }
 }
