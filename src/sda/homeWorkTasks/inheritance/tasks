@@ -1,0 +1,48 @@
+# Inheritance Task 1
+
+    1. Create class Person
+       1. Add fields `name`, `surname`, `age`
+       1. Add getters/setters
+       1. Override `toString` method
+    1. Create class `Student`, that extends `Person`
+       1. add field `mark`
+       1. Create constructor, getters and setters
+       1. Override `toString` method
+    1. Create class `Teacher`, that extends `Person`
+       1. add field `students` of type `Student[]`
+       1. Create constructor, getters and setters
+       1. Override `toString` method
+    1. Create one teacher and multiple students
+    1. Print them all
+    1. Add students to a teacher
+    1. Print teacher - make sure to see all students printed correctly
+
+Inheritance Task 2
+
+    Morse code translator: https://en.wikipedia.org/wiki/Morse_code
+    Create a class Letter. Create one method: public String[] getCode()
+    Create method getLength, which will return length of result of getCode()
+    Create a class for each letter. For example LetterA. Each should extend Letter class and override getCode.
+    getCode should return array of - and . Strings according to code of each letter.
+    In Main class create static method getLetter
+    It should receive char letter and return Letter
+    Use switch to create appropriate letter class:
+       switch (letter) {
+           case 'A': return new LetterA();
+           case 'B': return new LetterB();
+    ....
+       }
+    In main:
+    Ask user to enter text
+    Read entered text letter by letter (using for loop and `charAt` method).
+    Transform letter from character into Letter using getLetter method and save it into array
+    Calculate total length of all letters codes. Use letter.getLength method for that
+    Create an String array of that length to put in codes of all letters
+    Put all letters codes into array
+    Print the array.
+
+
+    WikipediaWikipedia
+    Morse code
+    Morse code is a method used in telecommunication to encode text characters as standardized sequences of two different signal durations, called dots and dashes  or dits and dahs. Morse code is named after  Samuel Morse, an inventor of the telegraph.
+    The International Morse Code encodes the 26 English letters A through Z, some non-English letters, the Arabic numerals and a small set of punctuation and procedural signals (prosigns). There is no distinction between upper and lower case letters. Each Morse code symbol is formed by a sequence of dots and dashes. The dot duration is the basic unit of time measurement in Morse code transmission. The duration of a dash is three times the duration of a d… Show more(81 kB)

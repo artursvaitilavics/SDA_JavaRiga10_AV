@@ -7,7 +7,7 @@ public class CompMain {
         Muzzle muzzle = new Muzzle();
         Dog dog = new Dog(muzzle);
 
-        System.out.println(dog.muzzle.getColor());
+        System.out.println(dog.getMuzzle().getColor());
 
     }
 }
