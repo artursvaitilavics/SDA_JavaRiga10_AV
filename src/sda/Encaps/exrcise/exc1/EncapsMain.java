@@ -1,4 +1,4 @@
-package sda.Encaps;
+package sda.Encaps.exrcise.exc1;
 
 import sda.Encaps.exrcise.exc1.Dog;
 
