@@ -1,4 +1,4 @@
-package PolyM;
+package NewBostonTutsPolyM;
 
 public class Zaz extends Car{
     @Override

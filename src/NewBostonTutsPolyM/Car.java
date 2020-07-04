@@ -1,4 +1,4 @@
-package PolyM;
+package NewBostonTutsPolyM;
 
 abstract public class Car {
 
