@@ -1,4 +1,4 @@
-package sda.homeWorkTasks.encapsul.task01;
+package sda.hmwork.encapsul.task01;
 
 public class Person {
     private String name;

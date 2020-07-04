@@ -1,4 +1,4 @@
-package sda.homeWorkTasks.encapsul.task01;
+package sda.hmwork.encapsul.task01;
 
 public class Task01Main {
     public static void main(String[] args) {
