@@ -10,5 +10,6 @@ class Main {
         window02.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window02.setSize(300, 500);
         window02.setVisible(true);
+
     }
 }
