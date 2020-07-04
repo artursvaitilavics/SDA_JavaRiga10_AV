@@ -1,19 +1,19 @@
 Encapsulation Practice Task 1:
-1. Create class Person
-2. Add fields and using getters/setters encapsulate those appropriately
-3. Name - filled in constructor, read only
-4. Surname - filled in constructor, read only
-5. age - set to 0 in constructor, read only
-6. hasWork - boolean. read/write
-7. create method grow. It should increment age by one.
-8. Write main to demonstrate work with Person class
+    1. Create class Person
+    2. Add fields and using getters/setters encapsulate those appropriately
+    3. Name - filled in constructor, read only
+    4. Surname - filled in constructor, read only
+    5. age - set to 0 in constructor, read only
+    6. hasWork - boolean. read/write
+    7. create method grow. It should increment age by one.
+    8. Write main to demonstrate work with Person class
 
 Encapsulation Practice Task 2
-1. Create classes:
-2. Car
-3. Animal
-4. Shape
-5. Laptop
-6. Add fields as you see fit
-7. Add at least 2 constructors to each class. One of constructors should use another constructor
-8. Add getters and setters. Make sure to validate values and setters.
+    1. Create classes:
+    2. Car
+    3. Animal
+    4. Shape
+    5. Laptop
+    6. Add fields as you see fit
+    7. Add at least 2 constructors to each class. One of constructors should use another constructor
+    8. Add getters and setters. Make sure to validate values and setters.
