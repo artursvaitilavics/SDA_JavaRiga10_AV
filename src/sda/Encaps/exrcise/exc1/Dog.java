@@ -51,4 +51,14 @@ public class Dog {
         this("name", 1, gender, race, 2);
     }
 
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", race='" + race + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }
