@@ -43,7 +43,7 @@ public class UsbPort extends Port {
     @Override
     public String toString() {
         return super.toString()
-                + " transfer speed: "
+                + "\n\t\tTransfer speed: "
                 + transferSpeed;
     }
 }

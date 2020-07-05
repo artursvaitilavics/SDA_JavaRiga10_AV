@@ -3,8 +3,10 @@ package sda.hmwork.composition.task02.components;
 public class SoundPort extends Port {
     String name;
     String function;
+    private String audioDrive;
 
     public SoundPort(String name, String function) {
+
         super(name, function);
     }
 
@@ -28,4 +30,10 @@ public class SoundPort extends Port {
         this.function = function;
     }
 
+    @Override
+    public String toString() {
+        return super.toString()
+                + "\n\t\t"
+                + getFunction();
+    }
 }

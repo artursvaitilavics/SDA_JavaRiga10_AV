@@ -27,6 +27,9 @@ abstract public class Port {
 
     @Override
     public String toString() {
-        return name + " is for " + function;
+        return "\tPort: "
+                + name
+                + "\n\t\tFunction: "
+                + function;
     }
 }
