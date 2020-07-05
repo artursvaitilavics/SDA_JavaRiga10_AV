@@ -20,10 +20,12 @@ public class Task02Main {
         }
 
         String[] codes = new String[codeLength];
+        int counter = 0;
         for (Letter letter :
                 letters) {
-            for (int i = 0; i < letter.getLength(); i++) {
+            for (int i = counter; i < letter.getLength(); i++) {
                 codes[i] = letter.getCode()[i];
+                counter++;
             }
         }
         System.out.println(Arrays.toString(codes));

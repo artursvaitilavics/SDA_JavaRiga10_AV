@@ -1,10 +1,8 @@
 package sda.inherit.exerc02;
 
-public class Animal {
+abstract public class Animal {
 
-    public void yieldVoice() {
-        System.out.println("Animal says Brrr");
-    }
+    abstract public void yieldVoice();
 }
 
 

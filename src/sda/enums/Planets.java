@@ -1,14 +1,35 @@
 package sda.enums;
 
+enum Size {
+    SMALLEST("Smallest"),
+    EARTHSIZE("Earth sized"),
+    PERFECT("Perfect"),
+    SMALLTOAVERAGE("Small to average"),
+    GIANT("Giant"),
+    HUGE("Huge"),
+    BIGBLUE("BigBlue"),
+    BIGCOLD("BigCold");
+
+    String size;
+
+    Size(String size) {
+        this.size = size;
+    }
+
+    String getSize(){
+        return this.size;
+    }
+}
+
 public enum Planets {
-    MERCURY("Smallest", "Mercury", 2),
-    VENUS("Earth sized", "Venus", 1),
-    EARTH("Perfect", "Earth", 0),
-    MARS("Small to Average", "Mars", 1),
-    JUPITER("Giant", "Jupiter", 2),
-    SATURN("Huge", "Saturn", 3),
-    URANUS("BigBlue", "Uranus", 4),
-    NEPTUNE("BigCold", "Neptune", 5);
+    MERCURY(Size.SMALLEST.getSize(), "Mercury", 2),
+    VENUS(Size.EARTHSIZE.getSize(), "Venus", 1),
+    EARTH(Size.PERFECT.getSize(), "Earth", 0),
+    MARS(Size.SMALLTOAVERAGE.getSize(), "Mars", 1),
+    JUPITER(Size.GIANT.getSize(), "Jupiter", 2),
+    SATURN(Size.HUGE.getSize(), "Saturn", 3),
+    URANUS(Size.BIGBLUE.getSize(), "Uranus", 4),
+    NEPTUNE(Size.BIGCOLD.getSize(), "Neptune", 5);
 
     String size;
     String name;

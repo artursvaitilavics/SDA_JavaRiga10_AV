@@ -1,10 +1,7 @@
 package sda.inherit.exerc01;
 
-public class Shapes {
-    private int perimeter;
+abstract public class Shapes {
+    abstract public int getPerimeter();
 
-    public Shapes(int perimeter) {
-        this.perimeter = perimeter;
-    }
-
+    abstract public int getArea();
 }
