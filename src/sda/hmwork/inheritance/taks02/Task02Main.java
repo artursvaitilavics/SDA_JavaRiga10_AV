@@ -15,14 +15,15 @@ public class Task02Main {
         int codeLength = 0;
 
         for (int i = 0; i < text.length(); i++) {
-            letters[i] = getLetter(text.charAt(i));
+            letters[i] = getLetter(text.charAt(i)); //atgriezh {'.','_'}
             codeLength += letters[i].getLength();
         }
 
         String[] codes = new String[codeLength];
-        for (int i = 0; i < letters.length; i++) {
-            for (int j = 0; j < letters[i].getLength(); j++) {
-                codes[j] = letters[i].getCode()[j];
+        for (Letter letter :
+                letters) {
+            for (int i = 0; i < letter.getLength(); i++) {
+                codes[i] = letter.getCode()[i];
             }
         }
         System.out.println(Arrays.toString(codes));
