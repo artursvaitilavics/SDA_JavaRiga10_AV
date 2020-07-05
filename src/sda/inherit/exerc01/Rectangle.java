@@ -1,6 +1,6 @@
 package sda.inherit.exerc01;
 
-public class Rectangle extends Shapes {
+public class Rectangle implements Shapes {
     int side01;
     int side02;
 

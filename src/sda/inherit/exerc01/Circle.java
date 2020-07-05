@@ -1,6 +1,6 @@
 package sda.inherit.exerc01;
 
-public class Circle extends Shapes {
+public class Circle implements Shapes {
     int radius;
     int pi = 3;
 

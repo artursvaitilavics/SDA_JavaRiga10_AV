@@ -1,6 +1,6 @@
 package sda.inherit.exerc02;
 
-public class Dog extends Animal {
+public class Dog implements Animal {
 
     @Override
     public void yieldVoice() {
