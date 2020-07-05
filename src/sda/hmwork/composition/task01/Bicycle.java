@@ -1,6 +1,4 @@
-package sda.hmwork.composition;
-
-import java.util.Arrays;
+package sda.hmwork.composition.task01;
 
 public class Bicycle {
     Steering steering;

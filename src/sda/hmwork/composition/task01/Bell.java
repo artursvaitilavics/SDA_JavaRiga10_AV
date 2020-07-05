@@ -1,4 +1,4 @@
-package sda.hmwork.composition;
+package sda.hmwork.composition.task01;
 
 public class Bell {
     private String name;

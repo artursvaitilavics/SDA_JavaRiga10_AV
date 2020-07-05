@@ -1,4 +1,4 @@
-package sda.hmwork.composition;
+package sda.hmwork.composition.task01;
 
 public class Steering {
     private String material;
@@ -15,6 +15,4 @@ public class Steering {
     public void setBell(Bell bell) {
         this.bell = bell;
     }
-
-
 }
