@@ -1,6 +1,6 @@
 package thenewboston.generics;
 
-public class GenericsMain {
+public class GenericsMain01 {
     public static void main(String[] args) {
         Integer[] inArray = {5, 6, 3, 7, 4, 8};
         Character[] charArray = {'a', 'g', 'p', 'r', 'b'};
