@@ -1,4 +1,4 @@
-package sda.inherit.exerc02;
+package sda.practice.inherit.exerc02;
 
 public interface Animal {
 

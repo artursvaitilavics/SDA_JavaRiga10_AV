@@ -1,8 +1,4 @@
-package sda.Encaps.exrcise.exc1;
-
-import sda.Encaps.exrcise.exc1.Dog;
-
-import javax.crypto.spec.PSource;
+package sda.practice.exrcise.exc1;
 
 public class EncapsMain {
     public static void main(String[] args) {

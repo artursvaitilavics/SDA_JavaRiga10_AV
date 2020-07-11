@@ -1,4 +1,4 @@
-package sda.Encaps.exrcise.exc2;
+package sda.practice.exrcise.exc2;
 
 public class Pocket {
     private int money;

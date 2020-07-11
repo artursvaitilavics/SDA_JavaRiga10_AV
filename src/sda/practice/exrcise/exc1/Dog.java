@@ -1,4 +1,4 @@
-package sda.Encaps.exrcise.exc1;
+package sda.practice.exrcise.exc1;
 
 public class Dog {
     private String name;

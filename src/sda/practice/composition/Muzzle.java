@@ -1,4 +1,4 @@
-package sda.composition;
+package sda.practice.composition;
 
 public class Muzzle {
     private String color = "red";
