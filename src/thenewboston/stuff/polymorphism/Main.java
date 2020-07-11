@@ -1,4 +1,4 @@
-package buckey.polymorphism;
+package thenewboston.stuff.polymorphism;
 
 public class Main {
     public static void main(String[] args) {

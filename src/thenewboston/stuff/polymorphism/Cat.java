@@ -1,4 +1,4 @@
-package buckey.polymorphism;
+package thenewboston.stuff.polymorphism;
 
 public class Cat extends Animal{
     @Override

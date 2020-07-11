@@ -1,4 +1,4 @@
-package NewBostonTutsPolyM;
+package thenewboston.stuff;
 
 public class ZazList {
     private Zaz[] theList = new Zaz[5];

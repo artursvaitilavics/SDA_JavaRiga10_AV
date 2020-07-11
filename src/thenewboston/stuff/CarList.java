@@ -1,4 +1,4 @@
-package NewBostonTutsPolyM;
+package thenewboston.stuff;
 
 public class CarList {
     private Car[] cars = new Car[5];

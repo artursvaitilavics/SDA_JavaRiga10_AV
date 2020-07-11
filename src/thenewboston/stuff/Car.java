@@ -1,4 +1,4 @@
-package NewBostonTutsPolyM;
+package thenewboston.stuff;
 
 abstract public class Car {
 

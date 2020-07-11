@@ -1,4 +1,4 @@
-package NewBostonTutsPolyM;
+package thenewboston.stuff;
 
 public class Kamaz {
     public void transport(Car car){
