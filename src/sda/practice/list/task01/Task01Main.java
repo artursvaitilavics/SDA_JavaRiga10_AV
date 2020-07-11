@@ -49,7 +49,7 @@ public class Task01Main {
                     System.out.println("Display product before product with first letter: ");
                     firstLetter = scanner.nextLine();
 
-                    for (int i = 0; i < purchaseList.size(); i++) {
+                    for (int i = 0; i < purchaseList.size() - 1; i++) {
                         if (purchaseList.get(i + 1).startsWith(firstLetter)) {
                             System.out.println(purchaseList.get(i));
                         }
