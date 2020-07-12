@@ -13,12 +13,12 @@ public class ExerciseIO {
                      new BufferedReader(new FileReader(file))) {
             String fileContent = "";
             String lines;
+            int countWords = 0;
             while ((lines = bufferedReader.readLine()) != null) {
-                System.out.println(lines);
-                fileContent+= lines;
+                String[] stringCount = lines.trim().split(" ");
+                countWords+=stringCount.length;
             }
-            String[] stringCount = fileContent.trim().split(" ");
-            System.out.println(stringCount.length);
+            System.out.println(countWords);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
