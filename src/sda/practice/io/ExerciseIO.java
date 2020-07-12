@@ -20,6 +20,9 @@ public class ExerciseIO {
                 if (!lines.isEmpty()) {
                     countWords += stringCount.length;
                 }
+                if (lines.contains("a")){
+                    System.out.println("Its there");
+                }
             }
             System.out.println(countWords);
 
