@@ -1,3 +1,4 @@
+
 package sda.practice.io;
 
 import java.io.*;
@@ -16,7 +17,9 @@ public class ExerciseIO {
             int countWords = 0;
             while ((lines = bufferedReader.readLine()) != null) {
                 String[] stringCount = lines.trim().split(" ");
-                countWords+=stringCount.length;
+                if (!lines.isEmpty()) {
+                    countWords += stringCount.length;
+                }
             }
             System.out.println(countWords);
 
