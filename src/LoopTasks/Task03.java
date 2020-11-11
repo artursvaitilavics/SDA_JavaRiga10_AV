@@ -11,15 +11,15 @@ public class Task03 {
         }
     }
 
-    public void WhileLoop(int x, int y) {
-        System.out.println("While Loop");
-        int count = 0;
-        while (count < x) {
-            System.out.println(y);
-            y += 2;
-            count++;
-        }
-    }
+//    public void WhileLoop(int x, int y) {
+//        System.out.println("While Loop");
+//        int count = 0;
+//        while (count < x) {
+//            System.out.println(y);
+//            y += 2;
+//            count++;
+//        }
+//    }
 
     public void DoWhileLoop(int x, int y) {
         System.out.println("Do-while Loop");
